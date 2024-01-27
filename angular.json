@@ -3,5 +3,56 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "material-cba": {
+      "projectType": "library",
+      "root": "projects/material-cba",
+      "sourceRoot": "projects/material-cba/src",
+      "prefix": "cba",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/material-cba/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/material-cba/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/material-cba/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/material-cba/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/material-cba/.storybook",
+            "browserTarget": "material-cba:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/material-cba/.storybook",
+            "browserTarget": "material-cba:build",
+            "compodoc": false,
+            "outputDir": "storybook-static"
+          }
+        }
+      }
+    }
   }
 }

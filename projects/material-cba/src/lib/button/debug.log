@@ -1,0 +1,4 @@
+[0127/172151.297:ERROR:registration_protocol_win.cc(107)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0127/172152.226:ERROR:registration_protocol_win.cc(107)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0127/172648.840:ERROR:registration_protocol_win.cc(107)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0127/172948.568:ERROR:registration_protocol_win.cc(107)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
